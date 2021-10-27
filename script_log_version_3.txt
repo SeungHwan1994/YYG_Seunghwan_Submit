@@ -1,0 +1,568 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20211027092007
+사용자 이름: DESKTOP-1N6TUHU\lshwa
+RunAs 사용자: DESKTOP-1N6TUHU\lshwa
+구성 이름: 
+Machine: DESKTOP-1N6TUHU (Microsoft Windows NT 10.0.19042.0)
+호스트 응용 프로그램: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+프로세스 ID: 3612
+PSVersion: 5.1.19041.1237
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1237
+BuildVersion: 10.0.19041.1237
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+기록이 시작되었습니다. 출력 파일은 version_3.txt입니다.
+PS C:\Users\lshwa\shLIM> git config --global user.name
+Seunghwan1994
+PS C:\Users\lshwa\shLIM> git config --global user.email
+lshwancgm@gmail.com
+PS C:\Users\lshwa\shLIM> git --version
+git version 2.33.1.windows.1
+PS C:\Users\lshwa\shLIM> git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+PS C:\Users\lshwa\shLIM> git clone https://github.com/SeungHwan1994/git_test_0.git
+Cloning into 'git_test_0'...
+warning: You appear to have cloned an empty repository.
+PS C:\Users\lshwa\shLIM> notepad my_text.txt
+PS C:\Users\lshwa\shLIM> cd .\git_test_0\
+PS C:\Users\lshwa\shLIM\git_test_0> notepad my_text.txt
+PS C:\Users\lshwa\shLIM\git_test_0> notepad gt_python.txt
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27   오전 9:30             45 gt_python.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> type .\gt_python.txt
+## First written at local
+import numpy as np
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gt_python.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\lshwa\shLIM\git_test_0> git add .\gt_python.txt
+
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   gt_python.txt
+PS C:\Users\lshwa\shLIM\git_test_0> git commit -m "first commit at local"
+[master (root-commit) cb5d009] first commit at local
+ 1 file changed, 2 insertions(+)
+ create mode 100644 gt_python.txt
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+PS C:\Users\lshwa\shLIM\git_test_0> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 268 bytes | 268.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SeungHwan1994/git_test_0.git
+ * [new branch]      master -> master
+PS C:\Users\lshwa\shLIM\git_test_0> git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 1.27 KiB | 72.00 KiB/s, done.
+From https://github.com/SeungHwan1994/git_test_0
+   cb5d009..dd52122  master     -> origin/master
+Updating cb5d009..dd52122
+Fast-forward
+ gt_python.txt => git_python.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ rename gt_python.txt => git_python.py (57%)
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27   오전 9:35             47 git_python.py
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> cd  
+PS C:\Users\lshwa\shLIM\git_test_0> cd ..
+PS C:\Users\lshwa\shLIM> cd .\git_test_0\
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\lshwa\shLIM\git_test_0> git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.37 KiB | 58.00 KiB/s, done.
+From https://github.com/SeungHwan1994/git_test_0
+   dd52122..eb4e71a  master     -> origin/master
+Updating dd52122..eb4e71a
+Fast-forward
+ README.md     | 5 +++++
+ git_python.py | 3 +++
+ 2 files changed, 8 insertions(+)
+ create mode 100644 README.md
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:06             96 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> type .\git_python.py
+## First written at local
+import numpy as np
+
+## second written at github
+x = [1, 2, 3, 4]
+PS C:\Users\lshwa\shLIM\git_test_0> type .\README.md
+# git_test_0
+My second test
+
+## Second day
+git trial
+PS C:\Users\lshwa\shLIM\git_test_0> notepad .\git_python.py
+PS C:\Users\lshwa\shLIM\git_test_0> tyoe .\git_python.py
+tyoe : 'tyoe' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도하십시
+오.
+위치 줄:1 문자:1
++ tyoe .\git_python.py
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (tyoe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+tyoe : 'tyoe' 용어가 cmdlet, 함수, 스크립트 파일 또는 실행할 수 있는 프로그램 이름으로 인식되
+지 않습니다. 이름이 정확한지 확인하고 경로가 포함된 경우 경로가 올바른지 검증한 다음 다시 시도
+하십시오.
+위치 줄:1 문자:1
++ tyoe .\git_python.py
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (tyoe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\lshwa\shLIM\git_test_0> type .\git_python.py
+## First written at local
+import numpy as np
+
+## second written at github
+x = [1, 2, 3, 4]
+
+## Third written at local
+y = np.exp(x)
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_python.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\lshwa\shLIM\git_test_0> git add .\git_python.py
+
+PS C:\Users\lshwa\shLIM\git_test_0> git commit -m "exponential"
+[master 3a466dc] exponential
+ 1 file changed, 3 insertions(+)
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\lshwa\shLIM\git_test_0> git push
+To https://github.com/SeungHwan1994/git_test_0.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/SeungHwan1994/git_test_0.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\lshwa\shLIM\git_test_0> git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 769 bytes | 51.00 KiB/s, done.
+From https://github.com/SeungHwan1994/git_test_0
+   eb4e71a..3ec96e7  master     -> origin/master
+PS C:\Users\lshwa\shLIM\git_test_0> git pull
+Auto-merging git_python.py
+CONFLICT (content): Merge conflict in git_python.py
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   git_python.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\lshwa\shLIM\git_test_0> type .\git_python.py
+## First written at local
+import numpy as np
+
+## second written at github
+x = [1, 2, 3, 4]
+
+## Third written at github
+
+## Fourth written at local
+y = np.log(x)
+PS C:\Users\lshwa\shLIM\git_test_0> git add .\git_python.py
+
+PS C:\Users\lshwa\shLIM\git_test_0> git commit -m "Fourth at local"
+[master 88c5588] Fourth at local
+PS C:\Users\lshwa\shLIM\git_test_0> git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 655 bytes | 218.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/SeungHwan1994/git_test_0.git
+   3ec96e7..88c5588  master -> master
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout -b branch_0
+Switched to a new branch 'branch_0'
+PS C:\Users\lshwa\shLIM\git_test_0> git branch
+* branch_0
+  master
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:19            171 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\lshwa\shLIM\git_test_0> git diff branch_0 origin/master
+
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout branch_0
+Switched to branch 'branch_0'
+PS C:\Users\lshwa\shLIM\git_test_0> git notepad test.txt
+git: 'notepad' is not a git command. See 'git --help'.
+PS C:\Users\lshwa\shLIM\git_test_0> notepad test.txt
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:19            171 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+-a----      2021-10-27  오전 10:27             41 test.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git checout master
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:19            171 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+-a----      2021-10-27  오전 10:27             41 test.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout branch_0
+Switched to branch 'branch_0'
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch branch_0
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\lshwa\shLIM\git_test_0> git add .\test.txt
+
+PS C:\Users\lshwa\shLIM\git_test_0> git commit -m "test"
+[branch_0 61694fa] test
+ 1 file changed, 2 insertions(+)
+ create mode 100644 test.txt
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch branch_0
+nothing to commit, working tree clean
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:19            171 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+-a----      2021-10-27  오전 10:27             41 test.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:19            171 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout branch_0
+Switched to branch 'branch_0'
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:19            171 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+-a----      2021-10-27  오전 10:29             41 test.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git push
+fatal: The current branch branch_0 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch_0
+PS C:\Users\lshwa\shLIM\git_test_0> git push --set-upstream origin branch_0
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 351 bytes | 175.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch_0' on GitHub by visiting:
+remote:      https://github.com/SeungHwan1994/git_test_0/pull/new/branch_0
+remote:
+To https://github.com/SeungHwan1994/git_test_0.git
+ * [new branch]      branch_0 -> branch_0
+Branch 'branch_0' set up to track remote branch 'branch_0' from 'origin'.
+PS C:\Users\lshwa\shLIM\git_test_0> git branch
+* branch_0
+  master
+PS C:\Users\lshwa\shLIM\git_test_0> git pull
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.42 KiB | 50.00 KiB/s, done.
+From https://github.com/SeungHwan1994/git_test_0
+   61694fa..c950fcb  branch_0   -> origin/branch_0
+   88c5588..8a95f00  master     -> origin/master
+Updating 61694fa..c950fcb
+Fast-forward
+ git_python.py | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 10:59            222 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+-a----      2021-10-27  오전 10:29             41 test.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> type .\git_python.py
+## First written at local
+import numpy as np
+
+## second written at github
+x = [1, 2, 3, 4]
+
+## Third written at github
+
+## Fourth written at local
+y = np.log(x)
+
+## fifth written at github Branch_0
+plot(x, y)
+PS C:\Users\lshwa\shLIM\git_test_0> git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS C:\Users\lshwa\shLIM\git_test_0> git pull
+Updating 88c5588..8a95f00
+Fast-forward
+ git_python.py | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\lshwa\shLIM\git_test_0> git type .\git_python.py
+git: 'type' is not a git command. See 'git --help'.
+
+The most similar command is
+        grep
+PS C:\Users\lshwa\shLIM\git_test_0> type .\git_python.py
+## First written at local
+import numpy as np
+
+## second written at github
+x = [1, 2, 3, 4]
+
+## Third written at github
+
+## Fourth written at local
+y = np.log(x)
+
+## fifth written at github master
+hist(x, y)
+PS C:\Users\lshwa\shLIM\git_test_0> git branch
+  branch_0
+* master
+PS C:\Users\lshwa\shLIM\git_test_0> git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.39 KiB | 79.00 KiB/s, done.
+From https://github.com/SeungHwan1994/git_test_0
+   8a95f00..5f1e27a  master     -> origin/master
+Updating 8a95f00..5f1e27a
+Fast-forward
+ git_python.py | 7 +++++--
+ test.txt      | 2 ++
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+ create mode 100644 test.txt
+PS C:\Users\lshwa\shLIM\git_test_0> git brancg
+git: 'brancg' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+PS C:\Users\lshwa\shLIM\git_test_0> git branch
+  branch_0
+* master
+PS C:\Users\lshwa\shLIM\git_test_0> git branch -d branch_0
+Deleted branch branch_0 (was c950fcb).
+PS C:\Users\lshwa\shLIM\git_test_0> ls
+
+
+    디렉터리: C:\Users\lshwa\shLIM\git_test_0
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----      2021-10-27  오전 11:05            266 git_python.py
+-a----      2021-10-27  오전 10:06             58 README.md
+-a----      2021-10-27  오전 11:05             41 test.txt
+
+
+PS C:\Users\lshwa\shLIM\git_test_0> git branch
+* master
+PS C:\Users\lshwa\shLIM\git_test_0> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
